@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker - Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="nav-home">Home</a></li>
+            <li><a href="#" id="nav-calculator">Calculator</a></li>
+            <li><a href="#" id="nav-report">Report</a></li>
+            <li><a href="#" id="nav-graph">Graph</a></li>
+            <li><a href="#" id="nav-print">Print</a></li>
+        </ul>
+    </nav>
+
+    <div id="home-page" class="page">
+        <div class="center-message">
+            <h1>Welcome to Personal Finance Tracker</h1>
+            <p>Manage your finances effectively.</p>
+        </div>
+    </div>
+
+    <div id="input-page" class="page" style="display:none;">
+        <h1>Enter Your Financial Details</h1>
+        <form id="finance-form">
+            <label for="income">Income:</label>
+            <input type="number" id="income" name="income" required>
+
+            <label for="loan">Loan:</label>
+            <input type="number" id="loan" name="loan">
+
+            <label for="education">Education:</label>
+            <input type="number" id="education" name="education">
+
+            <label for="travel">Travel:</label>
+            <input type="number" id="travel" name="travel">
+
+            <label for="rent">Rent:</label>
+            <input type="number" id="rent" name="rent">
+
+            <label for="food">Food:</label>
+            <input type="number" id="food" name="food">
+
+            <button type="button" id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div id="report-page" class="page" style="display:none;">
+        <h1>Financial Report</h1>
+        <div id="report-container">
+            <section id="summary-section">
+                <h2>Summary</h2>
+                <p id="summary-message"></p>
+            </section>
+
+            <section id="detailed-report-section">
+                <h2>Detailed Expenditures</h2>
+                <div class="report-item">
+                    <h3>Loan</h3>
+                    <p>Amount: <span id="loan-amount"></span></p>
+                    <p>Recommended: <span id="loan-recommended"></span></p>
+                </div>
+                <div class="report-item">
+                    <h3>Education</h3>
+                    <p>Amount: <span id="education-amount"></span></p>
+                    <p>Recommended: <span id="education-recommended"></span></p>
+                </div>
+                <div class="report-item">
+                    <h3>Travel</h3>
+                    <p>Amount: <span id="travel-amount"></span></p>
+                    <p>Recommended: <span id="travel-recommended"></span></p>
+                </div>
+                <div class="report-item">
+                    <h3>Rent</h3>
+                    <p>Amount: <span id="rent-amount"></span></p>
+                    <p>Recommended: <span id="rent-recommended"></span></p>
+                </div>
+                <div class="report-item">
+                    <h3>Food</h3>
+                    <p>Amount: <span id="food-amount"></span></p>
+                    <p>Recommended: <span id="food-recommended"></span></p>
+                </div>
+            </section>
+
+            <section id="savings-section">
+                <h2>Savings</h2>
+                <p>Total Savings: <span id="total-savings"></span></p>
+            </section>
+        </div>
+    </div>
+
+    <div id="graph-page" class="page" style="display:none;">
+        <h1>Graphical Representation</h1>
+        <canvas id="finance-chart" width="1000" height="600"></canvas>
+    </div>
+
+    <div id="print-page" class="page" style="display:none;">
+        <h1>Financial Report</h1>
+        <div id="print-message"></div>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="calculator.js"></script>
+    <script src="report.js"></script>
+    <script src="graph.js"></script>
+    <script src="print.js"></script>
+</body>
+</html>
